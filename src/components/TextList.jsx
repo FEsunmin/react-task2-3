@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import { TextContext } from "../context/Context";
+import React from "react";
+import { useSelector } from "react-redux";
 
 function TextList() {
-  const { texts } = useContext(TextContext);
+  const texts = useSelector((state) => state.text.texts);
 
   return (
     <ul>
